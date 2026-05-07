@@ -254,17 +254,21 @@ Una observación importante: **el número de procesos MPI condiciona el escalado
 #### FxC con np = 3
 
 ![Tiempo medio FxC np=3](graficas/FxC_np3_01_tiempo.png)
+
 ![Speedup FxC np=3](graficas/FxC_np3_02_speedup.png)
+
 ![Eficiencia FxC np=3](graficas/FxC_np3_03_eficiencia.png)
 
 #### FxC con np = 5
 
 ![Tiempo medio FxC np=5](graficas/FxC_np5_01_tiempo.png)
+
 ![Speedup FxC np=5](graficas/FxC_np5_02_speedup.png)
 
 #### FxT con np = 3
 
 ![Tiempo medio FxT np=3](graficas/FxT_np3_01_tiempo.png)
+
 ![Speedup FxT np=3](graficas/FxT_np3_02_speedup.png)
 
 #### Distribución de tiempos (boxplots) — FxT np = 3
