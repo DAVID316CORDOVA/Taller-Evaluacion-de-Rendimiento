@@ -348,7 +348,7 @@ informe/
 │   ├── mxmOmpMPIfxt.c                 ← main MPI master/workers para FxT
 │   ├── Makefile                       ← compila ambos binarios con mpicc
 │   ├── filehost                       ← hostfile OpenMPI con los 6 nodos del clúster
-│   ├── lanzador.pl                    ← script Perl que recorre la batería completa
+│   ├── lanzador.pl                    ← script Perl canónico (ver nota más abajo)
 │   └── analisis.py                    ← script Python que genera tablas y gráficas
 ├── datos/
 │   ├── resumen.csv                    ← tabla maestra: 78 filas con todas las métricas
@@ -365,6 +365,15 @@ informe/
     ├── FxT_np{2,3,4,5}_01..05.png          ← análogo para FxT
     └── cmp_FxCvsFxT_np{2,3,4,5}.png        ← comparativa pareada por np
 ```
+
+### Nota sobre el `lanzador.pl` entregado
+
+La versión incluida en `codigo/lanzador.pl` es una **versión canónica y limpia** del script de automatización, alineada con la batería documentada en este informe (`np` ∈ {2, 3, 4, 5}, N ∈ {500, 1 000, 2 000, 3 000}, hilos ∈ {1, 2, 4}). Incorpora dos mejoras respecto al script literal que se ejecutó en el clúster durante las sesiones del 23 y 24 de abril de 2026:
+
+1. **Salto automático de combinaciones no válidas** (cuando N no es divisible por `np − 1`), evitando los archivos con mensajes de error que aparecen en versiones anteriores.
+2. **Reanudación idempotente**: si un `.dat` ya contiene 30 repeticiones, la corrida lo omite.
+
+El script que efectivamente generó los `.dat` actuales fue editado y relanzado varias veces a lo largo de las sesiones de ejecución (lo cual quedó reflejado en los timestamps heterogéneos de los archivos en `Soluciones/`). El script entregado en esta carpeta es la versión que reproduce el experimento completo en una sola corrida y es el que debe usarse de referencia.
 
 ### Cómo reproducir los resultados
 
