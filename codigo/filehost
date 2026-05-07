@@ -1,0 +1,13 @@
+#mpirun -hostfile hostfiles -np 2 ./exe
+Worker02		slots=1
+Worker03		slots=1
+Worker04		slots=1
+Worker05		slots=1
+Worker06		slots=1
+Worker07		slots=1
+Worker08		slots=1
+Worker09		slots=1
+Worker10		slots=1
+Worker11		slots=1
+Worker12		slots=1
+clusterHPC		slots=1
